@@ -1,0 +1,31 @@
+apiVersion: caos.ch/v1
+kind: Boom
+metadata:
+  name: caos
+  namespace: caos-system
+spec:
+  boom:
+    version: v4.0.0
+    selfReconciling: true
+  forceApply: true
+  currentStatePath: caos-internal/boom
+  metricCollection:
+    deploy: true
+  logCollection:
+    deploy: true
+  nodeMetricsExporter:
+    deploy: true
+  systemdMetricsExporter:
+    deploy: true
+  monitoring:
+    deploy: true
+  apiGateway:
+    deploy: true
+  kubeMetricsExporter:
+    deploy: true
+  reconciling:
+    deploy: true
+  metricsPersisting:
+    deploy: true
+  logsPersisting:
+    deploy: true
